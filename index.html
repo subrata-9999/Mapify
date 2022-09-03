@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAPIFY</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/8fcbe63841.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="tab__icon.png">
+    <link rel="stylesheet" href="style.css">
+    
+
+</head>
+<body>
+
+
+
+    
+    <div class="main_div"><!--universal div start.................................................................................................................................................................-->
+        
+        <section class="detail_section">
+            
+            <ul class="list_of_button">
+
+                <div class="button_div">
+                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap"><i class="fa-solid fa-plus edit_button edit_button1"></i></button>
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Fill your location details</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">Name of the location</label>
+                                <input type="text" class="form-control input_name" id="recipient-name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message-text" class="col-form-label">LATITUDE : </label>
+                                <input type="number" step='0.00000001' value='' placeholder='00.00000000' class="form-control input_latitude" id="recipient-name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message-text" class="col-form-label">LONGITUDE : </label>
+                                <input type="number" step='0.00000001' value='' placeholder='00.00000000' class="form-control input_longitude" id="recipient-name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message-text" class="col-form-label">ADDRESS : </label>
+                                <textarea class="form-control input_address" id="message-text" required></textarea>
+                            </div>
+                        
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button>
+                            <button type="submit" class="btn btn-primary modal_submit" data-bs-dismiss="modal">CREATE</button>
+                        </div>
+                        </div>
+                    </form>
+                    
+                    </div>
+                    </div>
+
+                    <h2 class="name">MAPIFY</h2>
+
+                    <button class="btn btn-light" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"><i class="fa-solid fa-magnifying-glass-location edit_button edit_button2"></i></button>
+
+                    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalToggleLabel2">FIND YOUR LOCATION </h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <label for="message-text" class="col-form-label">LATITUDE : </label>
+                                    <input type="number" step='0.00000001' value='' placeholder='00.00000000' class="form-control input_latitude2" id="recipient-name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message-text" class="col-form-label">LONGITUDE : </label>
+                                    <input type="number" name="quantity" min="0" max="90" step='0.00000001' value='' placeholder='00.00000000' class="form-control input_longitude2" id="recipient-name" required>
+                                </div>                            
+                            </div>
+                            <div class="modal-footer">
+                              <button class="btn btn-primary modal_submit2" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">FIND</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    </ul>
+                    <center><hr class="devider_skil"></center>
+
+                    <ul class="list_of_new_ele"></ul>
+            
+                <!--modal section end...........................-->
+
+                <ul class="list_of_ele">
+                        <li>
+                            <div class="div_editor">
+                                <a href="#" class="location1">The Taj Mahal, Agra</a>
+                                <p>Dharmapuri, Forest Colony, Tajganj, Agra, Uttar Pradesh 282001</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="div_editor">
+                                <a href="#" class="location2">The Holy City of Varanasi</a>
+                                <p>6/186m, p, A/72, Sri Nagar Colony, Paharia, Varanasi, Uttar Pradesh 221007</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="div_editor">
+                                <a href="#" class="location3">Harmandir Sahib: The Golden Temple of Amritsar</a>
+                                <p>Golden Temple Rd, Atta Mandi, Katra Ahluwalia, Amritsar, Punjab 143006</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="div_editor">
+                                <a href="#" class="location4">The Golden City: Jaisalmer</a>
+                                <p>Savi Group, near Gadisar Lake Circle, Postal Colony, Jaisalmer, Rajasthan 345001</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="div_editor">
+                                <a href="#" class="location5">The Red Fort, New Delhi</a>
+                                <p>Netaji Subhash Marg, Lal Qila, Chandni Chowk, New Delhi, Delhi 110006</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="div_editor">
+                                <a href="#" class="location6">Mumbai: The Gateway of India</a>
+                                <p>Apollo Bandar, Colaba, Mumbai, Maharashtra 400001</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="div_editor">
+                                <a href="#" class="location7">Mecca Masjid, Hyderabad</a>
+                                <p>Charminar Rd, Charminar, Ghansi Bazaar, Hyderabad, Telangana 500002</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="div_editor">
+                                <a href="#" class="location8">Amer Fort, Jaipur</a>
+                                <p>Devisinghpura, Amer, Jaipur, Rajasthan 302001</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="div_editor">
+                                <a href="#" class="location9">Victoria Memorial</a>
+                                <p>Victoria Memorial Hall, 1, Queens Way, Maidan, Kolkata, West Bengal 700071</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="div_editor">
+                                <a href="#" class="location10">Periyar National Park and Wildlife Sanctuary, Madurai</a>
+                                <p>	Idukki and Pathanamthitta, Kerala state, India</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="div_editor">
+                                <a href="#" class="location11">Agra Fort</a>
+                                <p>Agra Fort, Rakabganj, Agra, Uttar Pradesh 282003</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="div_editor">
+                                <a href="#" class="location12">The Ellora Caves, Aurangabad</a>
+                                <p>Ellora Cave Rd, Ellora, Maharashtra 431102</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="div_editor">
+                                <a href="#" class="location13">Mehrangarh Fort, Jodhpur</a>
+                                <p>P.B # 165, The, Fort Rd, Jodhpur, Rajasthan 342006</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="div_editor">
+                                <a href="#" class="location14">Mysore Palace</a>
+                                <p>Sayyaji Rao Rd, Agrahara, Chamrajpura, Mysuru, Karnataka 570001</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="div_editor">
+                                <a href="#" class="location15">Mahabodhi Temple, Bodhgaya</a>
+                                <p>Bodh Gaya, Bihar 824231</p>
+                            </div>
+                        </li>
+
+                </ul>
+                
+            </section>
+
+        <div id="mymap"></div>
+
+    </div><!--universal div end..................................................................................................................................................................-->
+
+
+<center></centr><h6 class="copyright" style="padding-top: 1%; padding-bottom: 1%; color: black;">Copyright © 2022 SUBRATA PRAMANIK</h6></center>
+
+
+
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
