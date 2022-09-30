@@ -1,8 +1,8 @@
 
-## Mapify
+# Mapify
 It's a Web Application using Geolocation API of JavaScript.
 
-# 💁 Features / Functionalities
+## 💁 Features / Functionalities
   
   - Routing System
   - Dirction
@@ -12,7 +12,7 @@ It's a Web Application using Geolocation API of JavaScript.
   - Zoom in & Zoom out
   - More then one place finder in same time
 
-# 🛠️ Languages and Tools :
+## 🛠️ Languages and Tools :
   - JAVASCRIPT(Geolocation API & DOM)
   - Leaflet library
   - HTML
