@@ -18,7 +18,7 @@ It's a Web Application using Geolocation API of JavaScript.
   - HTML
   - CSS
 
-## 🚀 Live Demo :- This Web Application is Live [here](https://subrata-9999.github.io/Mapify/)
+## 🚀 Live Demo :- This Web Application is Live here. [click here](https://subrata-9999.github.io/Mapify/)
 <br><br>
    
 
