@@ -1,7 +1,25 @@
 
-# Mapify
-It's a web application of Geolocation API of JavaScript, build with Leaflet library, HTML, CSS, JS and BOOTSTRAP.
+## Mapify
+It's a Web Application using Geolocation API of JavaScript.
 
+# 💁 Features / Functionalities
+  
+  - Routing System
+  - Dirction
+  - Distance
+  - Current Location
+  - Add Location
+  - Zoom in & Zoom out
+  - More then one place finder in same time
+
+# 🛠️ Languages and Tools :
+  - JAVASCRIPT(Geolocation API & DOM)
+  - Leaflet library
+  - HTML
+  - CSS
+
+## 🚀 Live Demo :- [(click here)](https://subrata-9999.github.io/Mapify/)
+   
 
 ![mapify1](https://user-images.githubusercontent.com/109057053/188257263-3ebfc8d8-5ee8-464c-b617-2ccb9d20d769.png)
 ![mapify2](https://user-images.githubusercontent.com/109057053/188257272-1042c255-f39d-418c-99b5-d36948f47638.png)
