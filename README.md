@@ -1,6 +1,7 @@
 
 # Mapify
-It's a Web Application using Geolocation API of JavaScript.
+It's a Web Application of leaflet MAP.
+Implemented using Geolocation API of JavaScript & Leaflet Library.
 
 ## 💁 Features / Functionalities
   
