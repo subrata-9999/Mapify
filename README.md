@@ -1,6 +1,6 @@
 
 # Mapify
-It's a Web Application of leaflet MAP.
+It's a Web Application of leaflet MAP.<br>
 Implemented using Geolocation API of JavaScript & Leaflet Library.
 
 ## 💁 Features / Functionalities
