@@ -49,6 +49,7 @@ body {
   text-align: center;
   box-shadow: 0 20px 20px 0 rgba(7, 7, 7, 0.2),
     0 40px 40px 0 rgba(8, 8, 8, 0.537);
+   transition : transform 1s;
 }
 .list_of_ele .div_editor:hover {
   transform: scale(1.1);
